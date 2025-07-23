@@ -1,5 +1,5 @@
 
-# Web Development Project 5 - **FriendlyCat Dashboard 🐱**
+# Web Development Project 5/6 - **FriendlyCat Dashboard 🐱**
 
 Submitted by: **Rita Ghimire**
 
@@ -53,9 +53,9 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough](https://imgur.com/a/uHyVsqr.gif)
+![Video Walkthrough](https://imgur.com/a/oDIB9Eq.gif)
 
-GIF created with https://imgur.com/a/uHyVsqr.gif
+GIF created with https://imgur.com/a/oDIB9Eq.gif
 
 ---
 
@@ -64,6 +64,8 @@ GIF created with https://imgur.com/a/uHyVsqr.gif
 - Managing filters independently without triggering on every keystroke was a key challenge.
 - Parsing string-based lifespan data (e.g., `"12 - 15"`) into numbers required careful use of `.split()` and `parseInt`.
 - The Cat API returns inconsistent image data for some breeds — had to handle missing image IDs gracefully.
+- Used routes to navigate different pages
+- Created graphs and charts
 
 ---
 
