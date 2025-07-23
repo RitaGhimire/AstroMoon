@@ -3,6 +3,10 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 const API_KEY = import.meta.env.VITE_APP_API_KEY
+import {Link} from "react-router-dom"
+
+import Chart from './Components/Chart'
+import LineChart from './Components/LineChart'
 
 function App() {
   
@@ -10,9 +14,6 @@ function App() {
   const [filteredResults, setFilteredResults] = useState([])
   const [searchInput, setSearchInput] = useState("")
   const [maxLifespan, setMaxLifespan] = useState(25); 
-
-
-
 
   useEffect(() => {
    const fetchAllWeatherData = async() => {
@@ -121,9 +122,15 @@ function App() {
       return lifespanEnd <= maxLifespan;
     })
     .map((cat) => (
+
       <tr key={cat.id}>
-        <td>{cat.name}</td>
-        <td>{cat.origin}</td>
+
+<Link
+  to={`/WeatherInfo/${cat.id}`}
+>
+<td>{cat.name}</td>
+</Link>
+<td>{cat.origin}</td>
         <td>{cat.life_span}</td>
       </tr>
     ))}
@@ -131,8 +138,15 @@ function App() {
 
 
   </table>
+
+
   </div>
+<br></br>
   </div>
+  <div className='charts'>
+  <Chart data={list} />
+  <LineChart data={list}/>
+</div>
   </div>
 
 )}

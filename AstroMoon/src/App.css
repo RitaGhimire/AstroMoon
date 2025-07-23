@@ -1,4 +1,4 @@
-/* GLOBAL STYLES */
+
 body {
   background: linear-gradient(to right, #fdfbfb, #ebedee);
   font-family: 'Segoe UI', sans-serif;
@@ -6,13 +6,12 @@ body {
   margin: 0;
 }
 
-/* MAIN CONTAINER */
 .main {
   display: flex;
   height: 100vh;
 }
 
-/* LEFT SIDE NAV */
+
 .nav {
   width: 200px;
   background-color: #4e54c8; /* Gradient blue-purple */
@@ -165,4 +164,27 @@ th {
 
 tr:nth-child(even) {
   background-color: #f9f9f9;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background: #1d1f1d;
+  margin: 10px 30px;
+  padding: 5px 5px;
+  border-radius: 8px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.charts {
+  margin-top: 4rem;
+  padding: 10 rem;
+  background: #fefefe;
+  border-top: 5px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
